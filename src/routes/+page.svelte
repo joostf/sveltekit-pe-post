@@ -9,19 +9,14 @@
       loading = true
 
       return async ({ result, update }) => {
-          // fake api post
+          // fake slow api post request
           await setTimeout(() => {
               update()
 
               loading = false  
           }, 1000);
       }
-
-      // More Enhancements
-      // https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#validating_forms_using_javascript
-      // https://superforms.rocks/ form library for SvelteKit
   }
-
 </script>
 
 
@@ -31,8 +26,6 @@
             <h2 class="large-heading">Meld je aan voor <br>een design challenge</h2>
         </header>
 
-        <!-- Enhance the form with the use:enhance prop -->
-        <!-- Custom Enhance form with the use:enhance={handleForm} prop pointing to a custom form handler function -->
         <form action="/" method="POST" use:enhance={handleForm}> 
             {#if form?.error}
                 <p class="message fail">{form.message}</p>
