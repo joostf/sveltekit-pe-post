@@ -25,7 +25,7 @@
 </script>
 
 
-<section id="aanmelden" class="cta-row">
+<section>
     <div class="inner">
         <header>
             <h2 class="large-heading">Meld je aan voor <br>een design challenge</h2>
@@ -86,23 +86,161 @@
 </section>
 
 <style>
-form {
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:1rem;
-  width:auto;
-}
-form div {
-    width: 100%
-}
-strong {
-    font-size: .9em;
-    display: block;
-}
-form footer {
-    display:flex;
-    align-items: center;
-    gap:1rem;
-    flex-wrap: wrap;
+section {
+  height:100vh;
+  margin:-1rem;
+  padding: 4rem 1.5rem;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+
+  .inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  header {
+    margin-bottom: 2rem;
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      margin: 0;
+    }
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(8px);
+
+    @media (max-width: 800px) {
+      grid-template-columns: 1fr;
+    }
+
+    > div {
+      width: 100%;
+    }
+
+    fieldset {
+      border: none;
+      padding: 0;
+      margin-bottom: 1.5rem;
+
+      legend {
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        opacity: 0.8;
+      }
+
+      label {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        margin-bottom: 1rem;
+
+        span {
+          font-size: 0.9rem;
+          opacity: 0.85;
+        }
+      }
+    }
+
+    input,
+    textarea {
+      font-family: inherit;
+      font-size: 1rem;
+      padding: 0.75rem 0.9rem;
+      border-radius: 0.5rem;
+      border: 1px solid transparent;
+      background: rgba(255, 255, 255, 0.9);
+      color: #111;
+
+      &:focus {
+        outline: none;
+        border-color: #66e5bf;
+        box-shadow: 0 0 0 2px rgba(102, 229, 191, 0.3);
+      }
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 180px;
+      width:93%;
+    }
+
+    footer {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+
+      button {
+        appearance: none;
+        border: none;
+        border-radius: 999px;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        background: #66e5bf;
+        color: #0f2027;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+        &:hover {
+          transform: translateY(-1px);
+          box-shadow: 0 6px 20px rgba(102, 229, 191, 0.35);
+        }
+
+        &:active {
+          transform: translateY(0);
+          box-shadow: none;
+        }
+      }
+
+      .loader {
+        flex-shrink: 0;
+      }
+
+      .message {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+
+        &.fail {
+          background: rgba(255, 80, 80, 0.15);
+          color: #ffb3b3;
+        }
+
+        &.succes {
+          background: rgba(102, 229, 191, 0.15);
+          color: #66e5bf;
+        }
+      }
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.4;
+
+      strong {
+        display: block;
+        font-size: 0.85rem;
+        opacity: 0.75;
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
 }
 </style>
