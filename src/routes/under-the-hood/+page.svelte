@@ -2,7 +2,7 @@
   import { enhance } from '$app/forms'
 
   /*
-    SSR → Hydration → CSR (mental model):
+    SSR → Hydration → CSR:
 
     1. Server renders HTML using data from +page.server.js (SSR)
     2. HTML is sent to the browser and displayed immediately
