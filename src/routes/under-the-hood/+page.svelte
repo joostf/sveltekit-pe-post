@@ -60,8 +60,8 @@
       }
   }
 </script>
-
-<section id="aanmelden">
+<div>
+  <section id="aanmelden">
     <div class="inner">
         <header>
             <h2>Sign up for a design challenge</h2>
@@ -149,170 +149,173 @@
             </div>
         </form>
     </div>
-</section>
+  </section>
 
-<section>
-  <div class="inner">
-    <h2>(Meta) Frontend Framework Features</h2>
+  <section>
+    <div class="inner">
+      <h2>Under the hood</h2>
+      <h3>(Meta) Frontend Framework Features</h3>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Feature</th>
-          <th>Description</th>
-          <th>Where it appears</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>URL-driven routing</td>
-          <td>Routes and data loading are defined by the URL</td>
-          <td>Folder-based routing, load()</td>
-        </tr>
-        <tr>
-          <td>Server-side rendering (SSR)</td>
-          <td>HTML is rendered on the server before sending to client</td>
-          <td>+page.server.js</td>
-        </tr>
-        <tr>
-          <td>Progressive enhancement</td>
-          <td>Core functionality works without JavaScript</td>
-          <td>HTML form + use:enhance</td>
-        </tr>
-        <tr>
-          <td>Hydration</td>
-          <td>Client activates server-rendered HTML</td>
-          <td>$props(), reactive bindings</td>
-        </tr>
-        <tr>
-          <td>Client-side state</td>
-          <td>UI feedback without page reloads</td>
-          <td>$state, conditional rendering</td>
-        </tr>
-        <tr>
-          <td>Scoped styling</td>
-          <td>Styles are isolated per component</td>
-          <td>&lt;style&gt; in component</td>
-        </tr>
-      </tbody>
-    </table>
+      <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Description</th>
+            <th>Where it appears</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>URL-driven routing</td>
+            <td>Routes and data loading are defined by the URL</td>
+            <td>Folder-based routing, load()</td>
+          </tr>
+          <tr>
+            <td>Server-side rendering (SSR)</td>
+            <td>HTML is rendered on the server before sending to client</td>
+            <td>+page.server.js</td>
+          </tr>
+          <tr>
+            <td>Progressive enhancement</td>
+            <td>Core functionality works without JavaScript</td>
+            <td>HTML form + use:enhance</td>
+          </tr>
+          <tr>
+            <td>Hydration</td>
+            <td>Client activates server-rendered HTML</td>
+            <td>$props(), reactive bindings</td>
+          </tr>
+          <tr>
+            <td>Client-side state</td>
+            <td>UI feedback without page reloads</td>
+            <td>$state, conditional rendering</td>
+          </tr>
+          <tr>
+            <td>Scoped styling</td>
+            <td>Styles are isolated per component</td>
+            <td>&lt;style&gt; in component</td>
+          </tr>
+        </tbody>
+      </table>
 
-    <h2>Frameworks concepts compared</h2>
+      <h3>Frameworks concepts compared</h3>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Concept</th>
-          <th>SvelteKit</th>
-          <th>Next.js / React</th>
-          <th>Nuxt / Vue</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>File-based routing</td>
-          <td>+page.svelte</td>
-          <td>app/page.tsx</td>
-          <td>pages/index.vue</td>
-        </tr>
-        <tr>
-          <td>SSR data loading</td>
-          <td>load()</td>
-          <td>Server Components / getServerSideProps</td>
-          <td>useAsyncData</td>
-        </tr>
-        <tr>
-          <td>Form enhancement</td>
-          <td>use:enhance</td>
-          <td>Server Actions</td>
-          <td>Native forms + Nitro</td>
-        </tr>
-        <tr>
-          <td>Hydration</td>
-          <td>Automatic</td>
-          <td>hydrateRoot</td>
-          <td>Automatic</td>
-        </tr>
-        <tr>
-          <td>Scoped CSS</td>
-          <td>Component styles</td>
-          <td>CSS Modules</td>
-          <td>&lt;style scoped&gt;</td>
-        </tr>
-      </tbody>
-    </table>
+      <table>
+        <thead>
+          <tr>
+            <th>Concept</th>
+            <th>SvelteKit</th>
+            <th>Next.js / React</th>
+            <th>Nuxt / Vue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>File-based routing</td>
+            <td>+page.svelte</td>
+            <td>app/page.tsx</td>
+            <td>pages/index.vue</td>
+          </tr>
+          <tr>
+            <td>SSR data loading</td>
+            <td>load()</td>
+            <td>Server Components / getServerSideProps</td>
+            <td>useAsyncData</td>
+          </tr>
+          <tr>
+            <td>Form enhancement</td>
+            <td>use:enhance</td>
+            <td>Server Actions</td>
+            <td>Native forms + Nitro</td>
+          </tr>
+          <tr>
+            <td>Hydration</td>
+            <td>Automatic</td>
+            <td>hydrateRoot</td>
+            <td>Automatic</td>
+          </tr>
+          <tr>
+            <td>Scoped CSS</td>
+            <td>Component styles</td>
+            <td>CSS Modules</td>
+            <td>&lt;style scoped&gt;</td>
+          </tr>
+        </tbody>
+      </table>
 
-    <h2>Differences between frameworks</h2>
+      <h3>Differences between frameworks</h3>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Aspect</th>
-          <th>SvelteKit</th>
-          <th>Next.js (React)</th>
-          <th>Nuxt (Vue)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Default mental model</td>
-          <td>Server-first, HTML-first</td>
-          <td>Component-first, client-first (historically)</td>
-          <td>Hybrid, progressive</td>
-        </tr>
-        <tr>
-          <td>Progressive enhancement</td>
-          <td>Built-in and encouraged</td>
-          <td>Possible, but not the default</td>
-          <td>Supported, but often abstracted</td>
-        </tr>
-        <tr>
-          <td>Form handling</td>
-          <td>Native HTML forms + server actions</td>
-          <td>Server Actions or API routes</td>
-          <td>Server routes or composables</td>
-        </tr>
-        <tr>
-          <td>Hydration strategy</td>
-          <td>Automatic, minimal JavaScript</td>
-          <td>Automatic, often heavier bundles</td>
-          <td>Automatic, configurable</td>
-        </tr>
-        <tr>
-          <td>Client state philosophy</td>
-          <td>Local, minimal, reactive</td>
-          <td>Explicit hooks and stores</td>
-          <td>Refs, reactive objects</td>
-        </tr>
-        <tr>
-          <td>Rendering control</td>
-          <td>Per route (SSR, CSR, static)</td>
-          <td>Per page or component</td>
-          <td>Per page or layout</td>
-        </tr>
-        <tr>
-          <td>CSS scoping</td>
-          <td>Automatic per component</td>
-          <td>Manual (CSS Modules, styled)</td>
-          <td>Built-in via &lt;style scoped&gt;</td>
-        </tr>
-        <tr>
-          <td>Learning curve</td>
-          <td>Low to medium</td>
-          <td>Medium to high</td>
-          <td>Medium</td>
-        </tr>
-        <tr>
-          <td>Framework abstraction level</td>
-          <td>Thin layer over web standards</td>
-          <td>Thicker abstraction</td>
-          <td>Moderate abstraction</td>
-        </tr>
-      </tbody>
-    </table>
+      <table>
+        <thead>
+          <tr>
+            <th>Aspect</th>
+            <th>SvelteKit</th>
+            <th>Next.js (React)</th>
+            <th>Nuxt (Vue)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Default mental model</td>
+            <td>Server-first, HTML-first</td>
+            <td>Component-first, client-first (historically)</td>
+            <td>Hybrid, progressive</td>
+          </tr>
+          <tr>
+            <td>Progressive enhancement</td>
+            <td>Built-in and encouraged</td>
+            <td>Possible, but not the default</td>
+            <td>Supported, but often abstracted</td>
+          </tr>
+          <tr>
+            <td>Form handling</td>
+            <td>Native HTML forms + server actions</td>
+            <td>Server Actions or API routes</td>
+            <td>Server routes or composables</td>
+          </tr>
+          <tr>
+            <td>Hydration strategy</td>
+            <td>Automatic, minimal JavaScript</td>
+            <td>Automatic, often heavier bundles</td>
+            <td>Automatic, configurable</td>
+          </tr>
+          <tr>
+            <td>Client state philosophy</td>
+            <td>Local, minimal, reactive</td>
+            <td>Explicit hooks and stores</td>
+            <td>Refs, reactive objects</td>
+          </tr>
+          <tr>
+            <td>Rendering control</td>
+            <td>Per route (SSR, CSR, static)</td>
+            <td>Per page or component</td>
+            <td>Per page or layout</td>
+          </tr>
+          <tr>
+            <td>CSS scoping</td>
+            <td>Automatic per component</td>
+            <td>Manual (CSS Modules, styled)</td>
+            <td>Built-in via &lt;style scoped&gt;</td>
+          </tr>
+          <tr>
+            <td>Learning curve</td>
+            <td>Low to medium</td>
+            <td>Medium to high</td>
+            <td>Medium</td>
+          </tr>
+          <tr>
+            <td>Framework abstraction level</td>
+            <td>Thin layer over web standards</td>
+            <td>Thicker abstraction</td>
+            <td>Moderate abstraction</td>
+          </tr>
+        </tbody>
+      </table>
 
-  </div>
-</section>
+    </div>
+  </section>
+</div>
+
 
 <style>
 /*
@@ -320,11 +323,27 @@
   These styles apply only to this component.
   Svelte rewrites selectors to prevent leakage to the global scope.
 */
+:global(body) {
+  margin:0;
+}
+
+div {
+  display:grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 75em) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 section {
-  margin:-1rem;
+  /* margin:-1rem; */
   padding: 4rem 1.5rem;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: white;
+
+  div {
+    display:block;
+  }
 
   .inner {
     max-width: 1100px;
